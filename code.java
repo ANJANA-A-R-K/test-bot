@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.HashM;
 import java.util.List;
 import java.util.Map;
 
@@ -13,8 +13,17 @@ public class WordCounter {
         words.add("banana");
         words.add("banana");
 
-        
+        Map<String, Integer> wordCount = new HashMap<>();
+        for (String word : words) {
+            int count = 0;
+            for (String w : words) {
+                if (w.equals(word)) {
+                    count++;
+                }
+            }
+            wordCount.put(word, count);
+        }
 
-        System.out.println("empty class");
+        System.out.println(wordCount);
     }
 }
